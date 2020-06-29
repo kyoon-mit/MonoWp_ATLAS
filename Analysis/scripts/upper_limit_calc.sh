@@ -16,16 +16,16 @@ mwp=${masses[(($i-1))]}
   hist2workspace ./create_workspace/config/wpzp_final_L$L/wpzp_final.xml
 
   if (( $i < 4 )); then 
-  root -l -b -q StandardHypoTestInvDemo.C'("create_workspace/results/wpzp_final_L'$L'/wpzp_final_combined_mwp_model.root", "MET200_mwp_upper_limit_L'$L'.root", "combined", "ModelConfig", "", "asimovData", 3, 3, true, 3000, 0.05, 1.5, 1000, '$mwp')'
+  root -l -b -q StandardHypoTestInvDemo.C'("config/histworkspaces/lumi_'$L'/wpzp_final_combined_mwp_model.root", "lincut1_mwp_upper_limit_L'$L'.root", "combined", "ModelConfig", "", "asimovData", 3, 3, true, 3000, 0.05, 1.5, 1000, '$mwp')'
 
   elif (( $i < 10 )); then
-  root -l -b -q StandardHypoTestInvDemo.C'("create_workspace/results/wpzp_final_L'$L'/wpzp_final_combined_mwp_model.root", "MET200_mwp_upper_limit_L'$L'.root", "combined", "ModelConfig", "", "asimovData", 3, 3, true, 1200, 0.01, 0.6, 1000, '$mwp')'
+  root -l -b -q StandardHypoTestInvDemo.C'("config/histworkspaces/lumi_'$L'/wpzp_final_combined_mwp_model.root", "lincut1_mwp_upper_limit_L'$L'.root", "combined", "ModelConfig", "", "asimovData", 3, 3, true, 1200, 0.01, 0.6, 1000, '$mwp')'
 
   elif (( $i < 15 )); then
-  root -l -b -q StandardHypoTestInvDemo.C'("create_workspace/results/wpzp_final_L'$L'/wpzp_final_combined_mwp_model.root", "MET200_mwp_upper_limit_L'$L'.root", "combined", "ModelConfig", "", "asimovData", 3, 3, true, 400, 0.001, 0.2, 1000, '$mwp')'
+  root -l -b -q StandardHypoTestInvDemo.C'("config/histworkspaces/lumi_'$L'/wpzp_final_combined_mwp_model.root", "lincut1_mwp_upper_limit_L'$L'.root", "combined", "ModelConfig", "", "asimovData", 3, 3, true, 400, 0.001, 0.2, 1000, '$mwp')'
 
   else
-  root -l -b -q StandardHypoTestInvDemo.C'("create_workspace/results/wpzp_final_L'$L'/wpzp_final_combined_mwp_model.root", "MET200_mwp_upper_limit_L'$L'.root", "combined", "ModelConfig", "", "asimovData", 3, 3, true, 160, 0.001, 0.04, 1000, '$mwp')'
+  root -l -b -q StandardHypoTestInvDemo.C'("config/histworkspaces/lumi_'$L'/wpzp_final_combined_mwp_model.root", "lincut1_mwp_upper_limit_L'$L'.root", "combined", "ModelConfig", "", "asimovData", 3, 3, true, 160, 0.001, 0.04, 1000, '$mwp')'
 
   fi
 

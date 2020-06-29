@@ -15,15 +15,15 @@ touch $xml
 
 cat << EndXML > $xml     # Recreate new xml file if exists
 
-<!-- run hist2workspace ${DIRCONFIG_MONOWP}/channels/single/mwp_${mwp}.xml -->
+<!-- run hist2workspace top level -->
 
 <!DOCTYPE Combination  SYSTEM 'HistFactorySchema.dtd'>
 
-<Combination OutputFilePrefix="${DIRCONFIG_MONOWP}/histworkspaces/lumi_${2}" >
+<Combination OutputFilePrefix="${DIRCONFIG_MONOWP}/histworkspaces/lumi_${2}/mwp_${mwp}" >
 EndXML
 
-cat << EndXML >> $xml   # Append remaining information
-<Input>./create_workspace/config/wpzp_final_L${L}/mwp_$mwp.xml</Input>
+cat << EndXML >> $xml   # Append remaining information (if more than two input files)
+<Input>"${DIRCONFIG_MONOWP}/channels/single/mwp_$mwp.xml"</Input>
   <Measurement Name="mwp" Lumi="${2}" LumiRelErr="0.05" >
     <POI>xsec</POI>
     <ParamSetting Const="True">nevent_signal nevent_bkg1 pb_to_fb alpha_syst_signal alpha_syst_bkg1</ParamSetting>

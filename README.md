@@ -10,10 +10,12 @@ Author: K.Yoon
 ## Modules
 ### Fast Simulation
 
-### Analysis
+### Statistics
+* `Analysis/src/StandardHypoTestInvDemo.C` | I modified it to write to a root file.
 
 ### Plotting
-List of plotting modules. 
+* `Analysis/scripts/visualization/brazilplot.py` | Plot upper limits as a band with median and +/- 1 and 2 sigmas.
+* `Analysis/scripts/visualization/signal_efficiency.py` | Plot signal efficiency as a function of m<sub>W'</sub>.
 
 ### Selection Parameters
 Selection parameters are referred to with a string key (e.g. lincut1, lincut2, ttonly, etc.) which corresponds to a Python dict() object. The module which reads and writes the Python dict() objects is `Cuts.py`.

@@ -1,10 +1,10 @@
 
-<!-- run hist2workspace /home/kyoon/MonoWp_ATLAS/Analysis/config/channels/single/mwp_2000.xml -->
+<!-- run hist2workspace top level -->
 
 <!DOCTYPE Combination  SYSTEM 'HistFactorySchema.dtd'>
 
-<Combination OutputFilePrefix="/home/kyoon/MonoWp_ATLAS/Analysis/config/histworkspaces/lumi_150" >
-<Input>./create_workspace/config/wpzp_final_L/mwp_2000.xml</Input>
+<Combination OutputFilePrefix="/home/kyoon/MonoWp_ATLAS/Analysis/config/histworkspaces/lumi_150/mwp_2000" >
+<Input>"/home/kyoon/MonoWp_ATLAS/Analysis/config/channels/single/mwp_2000.xml"</Input>
   <Measurement Name="mwp" Lumi="150" LumiRelErr="0.05" >
     <POI>xsec</POI>
     <ParamSetting Const="True">nevent_signal nevent_bkg1 pb_to_fb alpha_syst_signal alpha_syst_bkg1</ParamSetting>

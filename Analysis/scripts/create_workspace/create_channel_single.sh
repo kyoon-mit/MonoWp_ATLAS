@@ -9,9 +9,11 @@ declare -a cross_section=(1.66e-05 1.39e-05 3.793e-05 3.867e-05 3.368e-05 2.82e-
 mwp=${masses[(($1-1))]}
 xsec=${cross_section[(($1-1))]}
 
-touch ${DIRCONFIG_MONOWP}/channels/single/mwp_$mwp.xml
+xml=${DIRCONFIG_MONOWP}/channels/single/mwp_$mwp.xml
 
-cat << EndXML > ${DIRCONFIG_MONOWP}/channels/single/mwp_$mwp.xml
+touch ${xml}
+
+cat << EndXML > ${xml}
 
 <!-- Single channel configuration for mwp = $mwp -->
 
