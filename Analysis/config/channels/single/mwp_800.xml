@@ -1,0 +1,27 @@
+
+<!-- Single channel configuration for mwp = 800 -->
+
+<!DOCTYPE Channel  SYSTEM 'HistFactorySchema.dtd'>
+
+  <Channel Name="mwp_800" InputFile="/home/kyoon/MonoWp_ATLAS/Data/Selection/DATA_lincut1.root" >
+
+    <!-- Set the StatError type to Poisson. -->
+    <StatErrorConfig RelErrorThreshold="0" ConstraintType="Poisson" />
+
+    <!-- Signal -->
+    <Sample Name="signal" HistoPath="lincut1/mwp800/" HistoName="signal" NormalizeByTheory="True">
+      <NormFactor Name="xsec" Val="1.935e-05" High="2" Low="0" Const="False"/>
+      <NormFactor Name="nevent_signal" Val="1e-05" High="1e-02" Low="0" Const="True"/>
+      <NormFactor Name="pb_to_fb" Val="1000" High="1001" Low="999" Const="True"/>
+      <OverallSys Name="syst_signal" High="1.50" Low="0.50"/> <!--xsec-->
+    </Sample>
+
+    <!-- Background -->
+    <Sample Name="background" HistoPath="lincut1/mwp800/" HistoName="bkg1_pp_ttbar" NormalizeByTheory="True" >
+      <NormFactor Name="xsec_b" Val="544.7" High="550" Low="540" Const="True"/>
+      <NormFactor Name="nevent_bkg1" Val="1.01206e-06" High="1e-04" Low="0" Const="True"/>
+      <NormFactor Name="pb_to_fb" Val="1000" High="1001" Low="999" Const="True"/>
+      <OverallSys Name="syst_bkg1" High="1.50" Low="0.50"/>
+    </Sample>
+
+  </Channel>
